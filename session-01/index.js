@@ -18,6 +18,7 @@
         somme = nombreun + nombredeux ;
     ////////////////////
     // Data types //////
+    // EX1 /////////////
     ////////////////////
     let num =40 //number
     let greeting = "hello"      //string
@@ -27,6 +28,12 @@
         key1 : "firstvalue" ,
         key2 : "anothervalue"
     }
+    // EX2 /////////////
+    var a = null;
+    var b ;
+
+    console.log(typeof a ); //OBJECT
+    console.log(typeof b); // UNDEFINED
     //////////////////////
     ///// Les fonctions //
     //////////////////////
