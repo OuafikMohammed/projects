@@ -84,16 +84,17 @@ console.log(Nomcomplet_Age)
 
 // console.log(nomsComplets);
 
-let nomstagiares;
-nomstagiares = stagiaires.map((item,index,) => {
-    let st ;
-    st = { ...item, branche: "DD" ,id:index + 1 }
-    if ((item.age) > 20 ) {
-        st.remarque =">20" ;
-    }
-    else if ((item.age) < 20 ) {
-        st.remarque ="<20" ;
-    }
-    return st
-})
-console.log(nomstagiares)
+// let nomstagiares;
+// nomstagiares = stagiaires.map((item,index,) => {
+//     let st ;
+//     st = { ...item, branche: "DD" ,id:index + 1 }
+//     if ((item.age) > 20 ) {
+//         st.remarque =">20" ;
+//     }
+//     else if ((item.age) < 20 ) {
+//         st.remarque ="<20" ;
+//     }
+//     return st
+// })
+// console.log(nomstagiares)
+ 
