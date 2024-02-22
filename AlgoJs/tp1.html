@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP -- 01</title>
+    <style>
+      p {
+        direction: ltr;
+      }
+      input[type="text"] {
+        background-color: red;
+      }
+      /*.khalid{
+        background-color: red;
+      }*/
+      /*p[class~="khalid"]{
+        background-color: yellow;
+      }*/
+      /*p[class|="sh"]{
+        background-color: red;
+      }*/
+      p[class*="ma"] {
+        background-color: red;
+      }
+      h1 + p {
+        display: inline-block;
+        color: rgb(6, 255, 27);
+      }
+      input + h1 {
+        color: red;
+      }
+      p ~ input {
+        height: 70px;
+      }
+      div {
+        border: 0.5px solid black;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+      }
+      .rien > div {
+        height: 10%;
+      }
+      .rien > div > div {
+        height: 2%;
+        background-color: yellow;
+      }
+      body > input {
+        background-color: aqua !important;
+      }
+      .rien > div:last-of-type {
+        background-color: aqua !important;
+      }
+      .ziko input:only-of-type {
+        background-color: green !important;
+      }
+      .bb{
+        height: 500px;
+        font-variant:small-caps;
+        text-decoration: line-through;
+        text-indent: 40px;
+        background-image: url("../../../csv.PNG");
+        background-attachment: ;
+      }
+      .bb:after{
+        content: "khalid";
+        background-color: yellow;
+      }
+      input[type = "email"]:invalid{
+        border-color: red;
+        outline: none;
+      }
+      @keyframes sn {
+        0%{
+          
+        }
+        100%{
+          
+        }
+      }
+      span{
+        background-color: red;
+        animation-name: sn;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="bb">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae modi eaque
+      harum suscipit, ab nam corporis ad quia eos consequatur facilis
+      perferendis molestias aspernatur quam non impedit aliquid qui vitae!
+    </p>
+    <input type="text" disabled />
+    <input type="email" required/>
+    <div class="ziko">
+      <input type="text" />
+    </div>
+    <h1>test</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum ab
+      soluta sequi! Quod distinctio sapiente earum, voluptatum natus pariatur,
+      nostrum vitae, necessitatibus ex nemo magni odit cum cupiditate fugiat?
+    </p>
+    <p class="sh-khalid-marzoug">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, non? Harum,
+      officiis fugiat! Odit alias voluptas ea eum eius, hic cumque. Culpa rem
+      nobis accusamus, nisi rerum numquam ipsam velit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium totam
+      inventore tempore voluptas sapiente dolores, accusamus itaque cumque
+      architecto voluptates repellendus tempora voluptate sequi repellat eos
+      iusto quis, minus modi!
+    </p>
+    <h1>jlkdsn</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ratione
+      provident accusantium consequuntur et totam, distinctio minima vel
+      reiciendis dolorem veniam earum, ad officiis ea repellendus similique
+      aliquid in nostrum?
+    </p>
+    <div class="rien">
+      <div>
+        <div></div>
+      </div>
+      <div></div>
+      <div></div>
+      <span>djfkdslkcvlsd</span>
+    </div>
+    <script src="tp1.js"></script>
+  </body>
+</html>
