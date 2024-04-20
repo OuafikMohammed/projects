@@ -1,0 +1,9 @@
+
+{
+    "user":{
+        "id":1,
+        "nom":"Oufik",
+        "age":18
+    },
+    "tasks":["Ajouter" ,"Modifier" , "Supprimer"]
+}

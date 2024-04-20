@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Password Confirmation */
+.success{
+    outline-style: none;
+    border: 3px rgb(0, 255, 21) solid;
+    border-radius: 2px;
+}
+
+.fail{
+    outline-style: none;
+    border: 2px red solid;
+}
+
+div{
+    border: 4px black solid;
+    padding: 3vw;
+    width: 23vw ;
+    height: 50vh;
+    margin: 10vw 0;
+}
+
+form > *:not(i, p){
+    margin-bottom: 10px;
+    
+}

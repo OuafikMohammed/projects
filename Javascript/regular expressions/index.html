@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nom =/DD\s[0-9]{3}/gi;
+        let prenom = new RegExp('amine?')
+        const article = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, architecto.Lorem amin sit amet, amineee adipisicing elit. Excepturi, amin Lorem lagdani dolor sit amet consectetur amine elit. legdali, necessitatibus.DD 105 DD 106 "
+        //exec Method ===> null or array
+        let execution = nom.exec(article);
+        console.log(execution)
+        // test Method ===> 
+        //search Method ===> -1 or index
+        let position = article.search(nom);
+        console.log(position)
+        //match method ===>  null or array
+        let matching = article.match(nom)
+        console.log(matching)
+        //replace method ===> 
+        let updatedArticle = article.replace(nom , "DEV")
+        let updatedArticle2 = article.replaceAll(nom , "DEV")
+        console.log(updatedArticle)
+        console.log(updatedArticle2)
+        // split Method ===>
+        let modules = "PHP/HTML-CSS_POO"
+        let listModules = modules.split(/[/_]/);// SEPERATORS : / _
+        console.log(listModules)
+        // replace Method ===>
+        let searchPattern = /(DD)\s([0-9]{3})/gi;
+        let updatedArticle3 = article.replace(searchPattern,"$1 - $2")
+        console.log(updatedArticle3)
+    </script>
+</body>
+</html>

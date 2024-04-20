@@ -1,0 +1,33 @@
+2024-02-27 14:06:45.841 +01 [14152] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-27 14:19:40.340 +01 [552] ERREUR:  erreur de syntaxe à la fin de l'entrée au caractère 195
+2024-02-27 14:19:40.340 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender binary(male,female) , salary varchar(25) , foreign key (cof
+2024-02-27 14:30:34.167 +01 [552] ERREUR:  le type « binary » n'existe pas au caractère 136
+2024-02-27 14:30:34.167 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender binary(male,female) , salary varchar(25) , coffeeshop_id  int);
+	
+2024-02-27 14:31:55.856 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « primary » au caractère 35
+2024-02-27 14:31:55.856 +01 [552] INSTRUCTION :  create table SHOPS (coffeeshop_id primary key , coffeshop_name varchar(25) , city_id  varchar(25) )
+2024-02-27 14:32:07.243 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « create » au caractère 295
+2024-02-27 14:32:07.243 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar(1) , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id  varchar(25) )
+	create table Fournisseurs(coffeeshop_id int primary key )
+	create table Locations(city_id primary key , city varchar(15), country varchar(15)) 
+2024-02-27 14:32:27.425 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « primary » au caractère 32
+2024-02-27 14:32:27.425 +01 [552] INSTRUCTION :  create table Locations(city_id primary key , city varchar(15), country varchar(15)) 
+2024-02-27 14:32:46.710 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 14:32:51.462 +01 [10268] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.693 s, sync=0.035 s, total=4.754 s; sync files=38, longest=0.003 s, average=0.001 s; distance=184 kB, estimate=4141 kB; lsn=0/1F3F4F8, redo lsn=0/1F3F4C0
+2024-02-27 14:40:33.898 +01 [552] ERREUR:  la contrainte de clé étrangère « shops_city_id_fkey » ne peut pas être implémentée
+2024-02-27 14:40:33.898 +01 [552] DÉTAIL:  Les colonnes clés « city_id » et « city_id » sont de types incompatibles : character varying et integer.
+2024-02-27 14:40:33.898 +01 [552] INSTRUCTION :  alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)
+2024-02-27 14:42:20.077 +01 [552] ERREUR:  la contrainte de clé étrangère « shops_city_id_fkey » ne peut pas être implémentée
+2024-02-27 14:42:20.077 +01 [552] DÉTAIL:  Les colonnes clés « city_id » et « city_id » sont de types incompatibles : character varying et integer.
+2024-02-27 14:42:20.077 +01 [552] INSTRUCTION :  alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)
+2024-02-27 14:42:24.182 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « varchar » au caractère 285
+2024-02-27 14:42:24.182 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar(1) , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id int  varchar(25) )
+	create table Fournisseurs(coffeeshop_id int primary key )
+	create table Locations(city_id int primary key , city varchar(15), country varchar(15))
+	alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)

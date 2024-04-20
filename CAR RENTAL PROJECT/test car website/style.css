@@ -1,0 +1,25 @@
+.car-logos-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev svg,
+  .next svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+  }
+  

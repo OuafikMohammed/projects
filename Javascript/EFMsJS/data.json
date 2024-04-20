@@ -1,0 +1,8 @@
+{
+    "categories" : [
+        {"id":1, "libelle":"Informatique"},
+        {"id":2, "libelle":"Bureatique"},
+        {"id":3, "libelle":"Matériel"},
+        {"id":4, "libelle":"Scolaire!"}
+    ]
+}

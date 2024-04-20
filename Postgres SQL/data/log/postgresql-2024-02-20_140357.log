@@ -1,0 +1,205 @@
+2024-02-20 14:03:58.088 +01 [676] LOG:  le syst�me de bases de donn�es a �t� arr�t� � 2024-02-20 14:03:44 +01
+2024-02-20 14:08:58.074 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-20 14:10:51.802 +01 [10268] LOG:  checkpoint complete: wrote 1037 buffers (6.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=113.550 s, sync=0.164 s, total=113.733 s; sync files=331, longest=0.002 s, average=0.001 s; distance=4915 kB, estimate=4915 kB; lsn=0/1A3B9C8, redo lsn=0/1A3B958
+2024-02-20 14:14:24.854 +01 [2632] ERREUR:  la relation « avion » existe déjà
+2024-02-20 14:14:24.854 +01 [2632] INSTRUCTION :  -- Creation des tables :
+	create table AVION (NA int primary key, Nom varchar(12), capacite int, Localite varchar(10));
+	create table PILOTE (NP int primary key, Nom varchar(25), Adresse varchar(40));
+	create table VOL (NV int primary key, NP int, NA int, VD varchar (10), VA varchar(10),HD int,HA int,
+					  foreign key (NA) references AVION(NA), foreign key (NP) references PILOTE(NP));
+	-- change type of an attribut :
+	-- alter table VOL
+	-- 	alter column NV type varchar(6);
+	-- -- insert into the table :
+	-- insert into AVION values (100, 'AIRBUS',300,'RABAT'), (101,'B737',220,'CASA'), (102, 'B737',220, 'RABAT');
+	-- Afficher tous les avions :
+	-- select * from avion;
+	-- Afficher tous les avions par ordre sur le nom :
+	-- select * from avion order by Nom;
+	-- -- Afficher les noms te les capacites des avion :
+	-- select Nom,capacite from avion;
+	-- -- Afficher les localites des avions sans redondance:
+	-- select distinct localite from avion;
+	-- -- Afficher les avions dans la localite et Rabat ou Casa :
+	-- select * from avion where localite = 'RABAT' or localite = 'CASA';
+	-- select * from avion where localite in ('RABAT','CASA');
+	-- -- Modifier une valeur :
+	-- update avion set capacite = 220 where NA = 101;
+	-- -- supprimer les avions dont la capacite est inferieure a 200 :
+	-- delete from avion where capacite < 200;
+	-- -- Afficher la capacite max, min et moy des avions :
+	-- select max(capacite),min(capacite),avg(capacite) from avion;
+	
+	-- ------------------------------------------------------------
+	-- insert into vol (NV, NA, VD, VA,HD,HA) values ('IT100', 100, 'Casablanca', 'Marrakech', 1200, 1400),
+	-- 						('IT101', 101, 'Rabat', 'Casablanca', 1330, 1500),
+	-- 						('IT102', 101, 'Casablanca', 'Rabat', 1400, 1530),
+	-- 						('IT103', 100, 'Marrakech', 'Casablanca', 1500, 1700),
+	-- 						('IT104', 101, 'Casablanca', 'Marrakech', 1600, 1800);
+	-- select * from vol;
+	-- insert into pilote values (1, 'Karim IDRISSI', '12 Rue Atlas Casablanca'),
+	-- 							(2, 'Fatima Benali', '789 Sahara Avenue Marrakech'),
+	-- 							(3, 'Ahmed Oujdaoui', '42 Rif Road Rabat'),
+	-- 							(4, 'Amal','Tanger');
+	-- select * from pilote;
+	-- update vol set NP = 1 where nv = 'IT100';
+	-- update vol set NP = 2 where nv = 'IT101';
+	-- update vol set NP = 3 where nv = 'IT102';
+	-- update vol set NP = 1 where nv = 'IT103';
+	-- update vol set NP = 2 where nv = 'IT104';
+	-- -- selectionner les pilotes quit conduit les vol 100 et 104 :
+	-- select pilote.nom, pilote.adresse from pilote
+	-- 	join vol on (vol.np = pilote.np)
+	-- 	where vol.NV in ('IT100','IT104');
+	
+	-- = <> !=  > < null between in like is null is not null like
+	--  like '%A%' 'A%' '%en'
+	-- like '-n--s' - un seul caractère
+	--- between '2023-04-15' and '2023-05-10' inclus?
+	-- as alias
+2024-02-20 14:15:51.877 +01 [2632] ERREUR:  la relation « avion » existe déjà
+2024-02-20 14:15:51.877 +01 [2632] INSTRUCTION :  create table AVION (NA int primary key, Nom varchar(12), capacite int, Localite varchar(10));
+	create table PILOTE (NP int primary key, Nom varchar(25), Adresse varchar(40));
+	create table VOL (NV int primary key, NP int, NA int, VD varchar (10), VA varchar(10),HD int,HA int,
+					  foreign key (NA) references AVION(NA), foreign key (NP) references PILOTE(NP));
+2024-02-20 14:18:58.849 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-20 14:19:06.431 +01 [10268] LOG:  checkpoint complete: wrote 70 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.514 s, sync=0.044 s, total=7.582 s; sync files=48, longest=0.002 s, average=0.001 s; distance=236 kB, estimate=4447 kB; lsn=0/1A76C68, redo lsn=0/1A76C30
+2024-02-20 14:26:22.325 +01 [11072] ERREUR:  la relation « avion » existe déjà
+2024-02-20 14:26:22.325 +01 [11072] INSTRUCTION :  -- Creation des tables :
+	create table AVION (NA int primary key, Nom varchar(12), capacite int, Localite varchar(10));
+	create table PILOTE (NP int primary key, Nom varchar(25), Adresse varchar(40));
+	create table VOL (NV int primary key, NP int, NA int, VD varchar (10), VA varchar(10),HD int,HA int,
+					  foreign key (NA) references AVION(NA), foreign key (NP) references PILOTE(NP));
+2024-02-20 14:28:49.709 +01 [11072] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « avion_pkey »
+2024-02-20 14:28:49.709 +01 [11072] DÉTAIL:  La clé « (na)=(100) » existe déjà.
+2024-02-20 14:28:49.709 +01 [11072] INSTRUCTION :  insert into AVION values (100, 'AIRBUS',300,'RABAT'), (101,'B737',220,'CASA'), (102, 'B737',220, 'RABAT');
+2024-02-20 14:28:58.445 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-20 14:29:01.369 +01 [10268] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.880 s, sync=0.026 s, total=2.924 s; sync files=23, longest=0.004 s, average=0.002 s; distance=122 kB, estimate=4015 kB; lsn=0/1A97488, redo lsn=0/1A95568
+2024-02-20 14:30:06.065 +01 [11072] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « vol_pkey »
+2024-02-20 14:30:06.065 +01 [11072] DÉTAIL:  La clé « (nv)=(IT100) » existe déjà.
+2024-02-20 14:30:06.065 +01 [11072] INSTRUCTION :  insert into vol (NV, NA, VD, VA,HD,HA) values ('IT100', 100, 'Casablanca', 'Marrakech', 1200, 1400),
+							('IT101', 101, 'Rabat', 'Casablanca', 1330, 1500),
+							('IT102', 101, 'Casablanca', 'Rabat', 1400, 1530),
+							('IT103', 100, 'Marrakech', 'Casablanca', 1500, 1700),
+							('IT104', 101, 'Casablanca', 'Marrakech', 1600, 1800);
+2024-02-20 14:30:12.585 +01 [11072] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « pilote_pkey »
+2024-02-20 14:30:12.585 +01 [11072] DÉTAIL:  La clé « (np)=(1) » existe déjà.
+2024-02-20 14:30:12.585 +01 [11072] INSTRUCTION :  select * from vol;
+	insert into pilote values (1, 'Karim IDRISSI', '12 Rue Atlas Casablanca'),
+								(2, 'Fatima Benali', '789 Sahara Avenue Marrakech'),
+								(3, 'Ahmed Oujdaoui', '42 Rif Road Rabat'),
+								(4, 'Amal','Tanger');
+2024-02-20 14:33:58.372 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-20 14:33:59.727 +01 [10268] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.324 s, sync=0.013 s, total=1.356 s; sync files=10, longest=0.002 s, average=0.002 s; distance=10 kB, estimate=3614 kB; lsn=0/1A97F48, redo lsn=0/1A97F10
+2024-02-20 15:22:34.292 +01 [11072] ERREUR:  erreur de syntaxe sur ou près de « : » au caractère 86
+2024-02-20 15:22:34.292 +01 [11072] INSTRUCTION :  select * from Vol;
+	select nom , adresse from pilote ;
+	select * from Vol where HD > 14:00:00;
+	select * from pilotes where nom like '%A';
+2024-02-20 15:50:31.623 +01 [13196] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 15:50:31.635 +01 [11072] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 15:50:31.642 +01 [12712] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 16:23:38.412 +01 [6960] ERREUR:  entrée manquante de la clause FROM pour la table « pilot » au caractère 68
+2024-02-20 16:23:38.412 +01 [6960] INSTRUCTION :  select pilote.nom, adresse.nom  from  pilote join vol on  vol.NP = pilot.NP where (NV="IT100" OR NV="IT104")
+2024-02-20 16:23:49.681 +01 [6960] ERREUR:  la relation « avion » existe déjà
+2024-02-20 16:23:49.681 +01 [6960] INSTRUCTION :  -- Creation des tables :
+	create table AVION (NA int primary key, Nom varchar(12), capacite int, Localite varchar(10));
+	create table PILOTE (NP int primary key, Nom varchar(25), Adresse varchar(40));
+	create table VOL (NV int primary key, NP int, NA int, VD varchar (10), VA varchar(10),HD int,HA int,
+					  foreign key (NA) references AVION(NA), foreign key (NP) references PILOTE(NP));
+	-- change type of an attribut :
+	alter table VOL
+		alter column NV type varchar(6);
+	-- insert into the table :
+	insert into AVION values (100, 'AIRBUS',300,'RABAT'), (101,'B737',220,'CASA'), (102, 'B737',220, 'RABAT');
+	-- Afficher tous les avions :
+	select * from avion;
+	-- Afficher tous les avions par ordre sur le nom :
+	select * from avion order by Nom;
+	-- Afficher les noms te les capacites des avion :
+	select Nom,capacite from avion;
+	-- Afficher les localites des avions sans redondance:
+	select distinct localite from avion;
+	-- Afficher les avions dans la localite et Rabat ou Casa :
+	select * from avion where localite = 'RABAT' or localite = 'CASA';
+	select * from avion where localite in ('RABAT','CASA');
+	-- Modifier une valeur :
+	update avion set capacite = 220 where NA = 101;
+	-- supprimer les avions dont la capacite est inferieure a 200 :
+	delete from avion where capacite < 200;
+	-- Afficher la capacite max, min et moy des avions :
+	select max(capacite),min(capacite),avg(capacite) from avion;
+	
+	------------------------------------------------------------
+	insert into vol (NV, NA, VD, VA,HD,HA) values ('IT100', 100, 'Casablanca', 'Marrakech', 1200, 1400),
+							('IT101', 101, 'Rabat', 'Casablanca', 1330, 1500),
+							('IT102', 101, 'Casablanca', 'Rabat', 1400, 1530),
+							('IT103', 100, 'Marrakech', 'Casablanca', 1500, 1700),
+							('IT104', 101, 'Casablanca', 'Marrakech', 1600, 1800);
+	select * from vol;
+	insert into pilote values (1, 'Karim IDRISSI', '12 Rue Atlas Casablanca'),
+								(2, 'Fatima Benali', '789 Sahara Avenue Marrakech'),
+								(3, 'Ahmed Oujdaoui', '42 Rif Road Rabat'),
+								(4, 'Amal','Tanger');
+	select * from pilote;
+	update vol set NP = 1 where nv = 'IT100';
+	update vol set NP = 2 where nv = 'IT101';
+	update vol set NP = 3 where nv = 'IT102';
+	update vol set NP = 1 where nv = 'IT103';
+	update vol set NP = 2 where nv = 'IT104';
+	-- selectionner les pilotes quit conduit les vol 100 et 104 :
+	select pilote.nom, pilote.adresse from pilote
+		join vol on (vol.np = pilote.np)
+		where vol.NV in ('IT100','IT104');
+		
+	-- = <> !=  > < null between in like is null is not null like
+	--  like '%A%' 'A%' '%en'
+	-- like '-n--s' - un seul caractère
+	--- between '2023-04-15' and '2023-05-10' inclus?
+	-- as alias
+	
+	select * from Vol;
+	select nom , adresse from pilote ;
+	select * from Vol where (HD > 14-00-00);
+	select * from pilotes where nom like '%A';
+	
+	
+	-- GROUP BY is used to group results
+	-- GROUP BY with a conditionwe use condition
+	-- HAVING IS USED JUST FOR GROUP BY
+	
+	select pilote.nom, adresse.nom  from  pilote join vol on  vol.NP = pilote.NP where (NV="IT100" OR NV="IT104")
+2024-02-20 16:23:59.644 +01 [6960] ERREUR:  entrée manquante de la clause FROM pour la table « adresse » au caractère 20
+2024-02-20 16:23:59.644 +01 [6960] INSTRUCTION :  select pilote.nom, adresse.nom  from  pilote join vol on  vol.NP = pilote.NP where (NV="IT100" OR NV="IT104")
+2024-02-20 16:24:46.876 +01 [6960] ERREUR:  la colonne « IT100 » n'existe pas au caractère 91
+2024-02-20 16:24:46.876 +01 [6960] INSTRUCTION :  select pilote.nom, pilote.nom  from  pilote join vol on  vol.NP = pilote.NP where (vol.NV="IT100" OR vol.NV="IT104")
+2024-02-20 16:47:25.144 +01 [6960] ERREUR:  la colonne pilote.addresse n'existe pas au caractère 20
+2024-02-20 16:47:25.144 +01 [6960] ASTUCE :  Peut-être que vous souhaitiez référencer la colonne « pilote.adresse ».
+2024-02-20 16:47:25.144 +01 [6960] INSTRUCTION :  select pilote.nom, pilote.addresse  from  pilote join vol on  vol.NP = pilote.NP where (vol.NV='IT100' OR vol.NV='IT104')
+2024-02-20 17:08:38.928 +01 [6960] ERREUR:  erreur de syntaxe sur ou près de « select » au caractère 122
+2024-02-20 17:08:38.928 +01 [6960] INSTRUCTION :  select pilote.nom, pilote.adresse  from  pilote join vol on  vol.NP = pilote.NP where (vol.NV='IT100' OR vol.NV='IT104')
+	select pilote.nom , count(vol.NV) AS NombreDeVols FROM Pilote INNER JOIN vol on pilote.NP = vol.NP
+	group by Pilote.NP;
+2024-02-20 17:23:51.698 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-20 17:25:37.806 +01 [10268] LOG:  checkpoint complete: wrote 974 buffers (5.9%); 1 WAL file(s) added, 0 removed, 0 recycled; write=105.696 s, sync=0.248 s, total=106.109 s; sync files=304, longest=0.002 s, average=0.001 s; distance=4580 kB, estimate=4580 kB; lsn=0/1F111E8, redo lsn=0/1F111B0
+2024-02-20 17:35:39.046 +01 [8640] ERREUR:  erreur de syntaxe sur ou près de « - » au caractère 93
+2024-02-20 17:35:39.046 +01 [8640] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), e-mail varchar(30) , hire_date date , gender binary(male,female) , salary varchar(25) , #coffeeshp_id(int primary key ))
+2024-02-20 17:36:05.074 +01 [8640] ERREUR:  erreur de syntaxe sur ou près de « # » au caractère 179
+2024-02-20 17:36:05.074 +01 [8640] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender binary(male,female) , salary varchar(25) , #coffeeshp_id(int primary key ))
+	
+2024-02-20 17:37:40.073 +01 [8640] ERREUR:  erreur de syntaxe sur ou près de « ) » au caractère 213
+2024-02-20 17:37:40.073 +01 [8640] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender binary(male,female) , salary varchar(25) , /*coffeeshp_id(int primary key )*/)
+	
+2024-02-20 17:42:40.467 +01 [8640] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 17:42:40.477 +01 [12120] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 17:42:40.500 +01 [7592] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 17:42:40.503 +01 [13088] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-20 17:42:40.673 +01 [9516] LOG:  n'a pas pu recevoir les donn�es du client : An existing connection was forcibly closed by the remote host.
+	

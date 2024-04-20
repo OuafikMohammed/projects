@@ -1,0 +1,21 @@
+h3 {
+    background-color: green;
+    color: black;
+    padding: 10px;
+    text-decoration: solid;
+    padding: 5px 0 5px 2px ;
+}
+input {
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 200px;
+}
+input:active{
+    background-color: greenyellow;
+    border: 2px solid black;
+    box-shadow: 5px 5px ;
+}
+/**************************************************/
+h1{
+    text-decoration: solid;
+}

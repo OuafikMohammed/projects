@@ -1,0 +1,222 @@
+2024-02-27 14:44:48.452 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « create » au caractère 285
+2024-02-27 14:44:48.452 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar(1) , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id int)
+	create table Fournisseurs(coffeeshop_id int primary key )
+	create table Locations(city_id int primary key , city varchar(15), country varchar(15))
+	alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)
+2024-02-27 14:46:36.006 +01 [552] ERREUR:  erreur de syntaxe à la fin de l'entrée au caractère 82
+2024-02-27 14:46:36.006 +01 [552] INSTRUCTION :  create table Fournisseurs(coffeeshop_id int primary key , coffee_type varchar(30)
+2024-02-27 14:47:46.477 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 14:47:48.495 +01 [10268] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.981 s, sync=0.012 s, total=2.018 s; sync files=10, longest=0.002 s, average=0.002 s; distance=92 kB, estimate=3736 kB; lsn=0/1F56738, redo lsn=0/1F56700
+2024-02-27 14:49:53.000 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « create » au caractère 285
+2024-02-27 14:49:53.000 +01 [552] INSTRUCTION :  create table EMPLOYES(id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar(1) , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id int)
+	create table Fournisseurs(coffeeshop_id int primary key , coffee_type varchar(30)
+	create table Locations(city_id int primary key , city varchar(15), country varchar(15))
+	alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)
+2024-02-27 14:50:23.935 +01 [552] ERREUR:  erreur de syntaxe à la fin de l'entrée au caractère 82
+2024-02-27 14:50:23.935 +01 [552] INSTRUCTION :  create table Fournisseurs(coffeeshop_id int primary key , coffee_type varchar(30)
+2024-02-27 14:52:46.499 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 14:52:51.776 +01 [10268] LOG:  checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.212 s, sync=0.040 s, total=5.278 s; sync files=39, longest=0.003 s, average=0.002 s; distance=196 kB, estimate=3382 kB; lsn=0/1F87778, redo lsn=0/1F87740
+2024-02-27 14:54:01.389 +01 [552] ERREUR:  la colonne « supplier_name » de la relation « fournisseurs » n'existe pas
+2024-02-27 14:54:01.389 +01 [552] INSTRUCTION :  alter table Fournisseurs
+	add primary key (supplier_name) 
+2024-02-27 14:55:40.199 +01 [552] ERREUR:  la relation « fournisseurs » existe déjà
+2024-02-27 14:55:40.199 +01 [552] INSTRUCTION :  create table Fournisseurs(coffeeshop_id int primary key , coffee_type varchar(30) , supplier_name varchar(45))
+2024-02-27 14:56:22.490 +01 [552] ERREUR:  les clés primaires multiples ne sont pas autorisées pour la table « fournisseurs »
+2024-02-27 14:56:22.490 +01 [552] INSTRUCTION :  alter table Fournisseurs
+	add primary key (supplier_name) 
+2024-02-27 14:57:46.776 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 14:57:50.286 +01 [10268] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.458 s, sync=0.029 s, total=3.511 s; sync files=30, longest=0.002 s, average=0.001 s; distance=158 kB, estimate=3059 kB; lsn=0/1FAF068, redo lsn=0/1FAF030
+2024-02-27 14:58:54.010 +01 [552] ERREUR:  les clés primaires multiples ne sont pas autorisées pour la table « fournisseurs »
+2024-02-27 14:58:54.010 +01 [552] INSTRUCTION :  alter table Fournisseurs
+	add primary key (supplier_name ,coffeeshop_id)
+2024-02-27 15:02:46.299 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:02:47.331 +01 [10268] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.004 s, sync=0.010 s, total=1.033 s; sync files=8, longest=0.002 s, average=0.002 s; distance=11 kB, estimate=2755 kB; lsn=0/1FB1F80, redo lsn=0/1FB1F48
+2024-02-27 15:07:46.341 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:07:47.909 +01 [10268] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.529 s, sync=0.018 s, total=1.569 s; sync files=15, longest=0.003 s, average=0.002 s; distance=54 kB, estimate=2484 kB; lsn=0/1FBFA10, redo lsn=0/1FBF9D8
+2024-02-27 15:10:54.960 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « ( » au caractère 28
+2024-02-27 15:10:54.960 +01 [552] INSTRUCTION :  ALTER TABLE EMLOYES
+	RENAME (id,employe_id)
+2024-02-27 15:12:05.960 +01 [12636] ERREUR:  n'a pas pu supprimer table locations car d'autres objets en dépendent
+2024-02-27 15:12:05.960 +01 [12636] DÉTAIL:  contrainte shops_city_id_fkey sur table shops dépend de table locations
+2024-02-27 15:12:05.960 +01 [12636] ASTUCE :  Utilisez DROP ... CASCADE pour supprimer aussi les objets dépendants.
+2024-02-27 15:12:05.960 +01 [12636] INSTRUCTION :  DROP TABLE IF EXISTS public.locations;
+2024-02-27 15:12:14.717 +01 [12636] ERREUR:  n'a pas pu supprimer table locations car d'autres objets en dépendent
+2024-02-27 15:12:14.717 +01 [12636] DÉTAIL:  contrainte shops_city_id_fkey sur table shops dépend de table locations
+2024-02-27 15:12:14.717 +01 [12636] ASTUCE :  Utilisez DROP ... CASCADE pour supprimer aussi les objets dépendants.
+2024-02-27 15:12:14.717 +01 [12636] INSTRUCTION :  DROP TABLE IF EXISTS public.locations;
+2024-02-27 15:12:43.364 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « create » au caractère 293
+2024-02-27 15:12:43.364 +01 [552] INSTRUCTION :  create table EMPLOYES(emloyee_id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar(1) , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id int)
+	create table Fournisseurs(coffeeshop_id int , coffee_type varchar(30) , supplier_name varchar(45))
+	create table Locations(city_id int primary key , city varchar(15), country varchar(15))
+2024-02-27 15:12:46.922 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:12:48.346 +01 [10268] LOG:  checkpoint complete: wrote 14 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.389 s, sync=0.011 s, total=1.425 s; sync files=10, longest=0.002 s, average=0.002 s; distance=74 kB, estimate=2243 kB; lsn=0/1FD2360, redo lsn=0/1FD2328
+2024-02-27 15:17:46.352 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:17:50.875 +01 [10268] LOG:  checkpoint complete: wrote 41 buffers (0.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=4.439 s, sync=0.037 s, total=4.525 s; sync files=36, longest=0.004 s, average=0.002 s; distance=194 kB, estimate=2038 kB; lsn=0/2002BC0, redo lsn=0/2002B88
+2024-02-27 15:27:48.562 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « table » au caractère 13
+2024-02-27 15:27:48.562 +01 [552] INSTRUCTION :  insert into table Employes(id ,first_name , last_name , e-mail , hire_date , gender , salary , coffeeshop_id ) VALUES (501599 , Carson , Mosconi , cmosconi@census.gov , 2015-08-29 , M , 32973, NULL),(144108 , Khalil , Corr , kcorr@github.io, 2014-04-23 , M , 52802, NULL )
+2024-02-27 15:28:04.220 +01 [552] ERREUR:  erreur de syntaxe sur ou près de « table » au caractère 13
+2024-02-27 15:28:04.220 +01 [552] INSTRUCTION :  insert into table Employes(employee_id ,first_name , last_name , e-mail , hire_date , gender , salary , coffeeshop_id ) VALUES (501599 , Carson , Mosconi , cmosconi@census.gov , 2015-08-29 , M , 32973, NULL),(144108 , Khalil , Corr , kcorr@github.io, 2014-04-23 , M , 52802, NULL )
+	
+2024-02-27 15:30:24.234 +01 [552] ERREUR:  la colonne « hire_date » est de type date mais l'expression est de type integer au caractère 87
+2024-02-27 15:30:24.234 +01 [552] ASTUCE :  Vous devez réécrire l'expression ou lui appliquer une transformation de type.
+2024-02-27 15:30:24.234 +01 [552] INSTRUCTION :  insert into  Employes VALUES (501599 , 'Carson' , 'Mosconi' , 'cmosconi@census.gov' , 2015-08-29 , 'M' , 32973, NULL),(144108 , 'Khalil' , 'Corr' , 'kcorr@github.io', 2014-04-23 ,' M' , 52802, NULL )
+	
+2024-02-27 15:31:11.856 +01 [552] ERREUR:  valeur trop longue pour le type character varying(1)
+2024-02-27 15:31:11.856 +01 [552] INSTRUCTION :  insert into  Employes VALUES (501599 , 'Carson' , 'Mosconi' , 'cmosconi@census.gov' , '2015-08-29' , 'M' , 32973, NULL),(144108 , 'Khalil' , 'Corr' , 'kcorr@github.io', '2014-04-23' ,' M' , 52802, NULL )
+	
+2024-02-27 15:32:25.675 +01 [12636] ERREUR:  n'a pas pu supprimer table locations car d'autres objets en dépendent
+2024-02-27 15:32:25.675 +01 [12636] DÉTAIL:  contrainte shops_city_id_fkey sur table shops dépend de table locations
+2024-02-27 15:32:25.675 +01 [12636] ASTUCE :  Utilisez DROP ... CASCADE pour supprimer aussi les objets dépendants.
+2024-02-27 15:32:25.675 +01 [12636] INSTRUCTION :  DROP TABLE IF EXISTS public.locations;
+2024-02-27 15:32:46.917 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:32:50.451 +01 [10268] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.478 s, sync=0.034 s, total=3.534 s; sync files=30, longest=0.003 s, average=0.002 s; distance=169 kB, estimate=1851 kB; lsn=0/202D208, redo lsn=0/202D1D0
+2024-02-27 15:37:46.452 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:37:51.729 +01 [10268] LOG:  checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.221 s, sync=0.037 s, total=5.277 s; sync files=38, longest=0.002 s, average=0.001 s; distance=230 kB, estimate=1689 kB; lsn=0/2066C70, redo lsn=0/2066C38
+2024-02-27 15:38:27.302 +01 [552] ERREUR:  une instruction insert ou update sur la table « shops » viole la contrainte de clé
+	étrangère « shops_city_id_fkey »
+2024-02-27 15:38:27.302 +01 [552] DÉTAIL:  La clé (city_id)=(1) n'est pas présente dans la table « locations ».
+2024-02-27 15:38:27.302 +01 [552] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , 1)
+2024-02-27 15:42:46.732 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 15:42:47.218 +01 [10268] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.456 s, sync=0.008 s, total=0.487 s; sync files=4, longest=0.004 s, average=0.002 s; distance=0 kB, estimate=1520 kB; lsn=0/2066FD0, redo lsn=0/2066F98
+2024-02-27 15:48:14.260 +01 [552] ERREUR:  la colonne « city_id » de la relation « employes » n'existe pas au caractère 21
+2024-02-27 15:48:14.260 +01 [552] INSTRUCTION :  update employes
+	set city_id = 1,city_id = 1;
+2024-02-27 15:48:26.172 +01 [552] ERREUR:  la colonne « coffeeeshop_id » de la relation « shops » n'existe pas au caractère 19
+2024-02-27 15:48:26.172 +01 [552] INSTRUCTION :  update shops 
+	set coffeeeshop_id = 1;
+2024-02-27 15:49:27.695 +01 [552] ERREUR:  une instruction insert ou update sur la table « shops » viole la contrainte de clé
+	étrangère « shops_city_id_fkey »
+2024-02-27 15:49:27.695 +01 [552] DÉTAIL:  La clé (city_id)=(1) n'est pas présente dans la table « locations ».
+2024-02-27 15:49:27.695 +01 [552] INSTRUCTION :  update shops
+	set city_id = 1;
+2024-02-27 16:12:30.665 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 16:12:40.528 +01 [10268] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.188 s, sync=9.576 s, total=9.864 s; sync files=2, longest=9.575 s, average=4.788 s; distance=0 kB, estimate=1368 kB; lsn=0/2067210, redo lsn=0/20671D8
+2024-02-27 16:46:05.221 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « insert » au caractère 205
+2024-02-27 16:46:05.221 +01 [12696] INSTRUCTION :  insert into  Employes VALUES (501599 , 'Carson' , 'Mosconi' , 'cmosconi@census.gov' , '2015-08-29' , 'M' , 32973, NULL),(144108 , 'Khalil' , 'Corr' , 'kcorr@github.io', '2014-04-23' ,' M' , 52802, NULL )
+	insert into SHOPS VALUES (1 , 'Common Grounds' , NULL)
+	insert into Locations(1,'Los Angeles', 'United States')
+2024-02-27 16:46:24.758 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « shops_pkey »
+2024-02-27 16:46:24.758 +01 [12696] DÉTAIL:  La clé « (coffeeshop_id)=(1) » existe déjà.
+2024-02-27 16:46:24.758 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , NULL)
+2024-02-27 16:46:53.257 +01 [10568] ERREUR:  n'a pas pu supprimer table shops car d'autres objets en dépendent
+2024-02-27 16:46:53.257 +01 [10568] DÉTAIL:  contrainte fournisseurs_coffeeshop_id_fkey sur table fournisseurs dépend de table shops
+2024-02-27 16:46:53.257 +01 [10568] ASTUCE :  Utilisez DROP ... CASCADE pour supprimer aussi les objets dépendants.
+2024-02-27 16:46:53.257 +01 [10568] INSTRUCTION :  DROP TABLE IF EXISTS public.shops;
+2024-02-27 16:47:30.601 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 16:47:30.955 +01 [10268] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.326 s, sync=0.006 s, total=0.356 s; sync files=4, longest=0.003 s, average=0.002 s; distance=6 kB, estimate=1232 kB; lsn=0/2068C70, redo lsn=0/2068C38
+2024-02-27 16:50:44.392 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « 1 » au caractère 23
+2024-02-27 16:50:44.392 +01 [12696] INSTRUCTION :  insert into Locations(1,'Los Angeles', 'United States')
+2024-02-27 16:51:14.324 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « 1 » au caractère 23
+2024-02-27 16:51:14.324 +01 [12696] INSTRUCTION :  insert into Locations(1,'LosAngeles', 'United States')
+	
+2024-02-27 16:52:44.690 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « shops_pkey »
+2024-02-27 16:52:44.690 +01 [12696] DÉTAIL:  La clé « (coffeeshop_id)=(1) » existe déjà.
+2024-02-27 16:52:44.690 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , NULL)
+2024-02-27 16:53:25.727 +01 [12696] ERREUR:  une instruction insert ou update sur la table « shops » viole la contrainte de clé
+	étrangère « shops_city_id_fkey »
+2024-02-27 16:53:25.727 +01 [12696] DÉTAIL:  La clé (city_id)=(1) n'est pas présente dans la table « locations ».
+2024-02-27 16:53:25.727 +01 [12696] INSTRUCTION :  update shops
+	set city_id = 1;
+2024-02-27 16:55:47.431 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « 1 » au caractère 23
+2024-02-27 16:55:47.431 +01 [12696] INSTRUCTION :  insert into Locations(1,'LosAngeles', 'United States')
+	
+2024-02-27 16:55:49.194 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « create » au caractère 290
+2024-02-27 16:55:49.194 +01 [12696] INSTRUCTION :  create table EMPLOYES(emloyee_id int primary key , first_name varchar(30) , last_name varchar(30), email varchar(30) , hire_date date , gender varchar , salary varchar(25) , coffeeshop_id  int);
+	create table SHOPS (coffeeshop_id int primary key , coffeshop_name varchar(25) , city_id int)
+	create table Fournisseurs(coffeeshop_id int , coffee_type varchar(30) , supplier_name varchar(45))
+	create table Locations(city_id int primary key , city varchar(15), country varchar(15))
+	
+	-- ADD FOREIGN KEY 
+	alter table SHOPS 
+	add foreign key (city_id) references Locations(city_id)
+	-- ADD PRIMARY KEY 
+	alter table Fournisseurs
+	add primary key (supplier_name ,coffeeshop_id)
+	-- ADD FOREIGN KEY 
+	alter table Fournisseurs
+	add foreign key (coffeeshop_id) references shops(coffeeshop_id)
+	-- AFFICHER LES TABLES  --
+	select * from shops
+	-- INSERT VALUES 
+	insert into  Employes VALUES (501599 , 'Carson' , 'Mosconi' , 'cmosconi@census.gov' , '2015-08-29' , 'M' , 32973, NULL),(144108 , 'Khalil' , 'Corr' , 'kcorr@github.io', '2014-04-23' ,' M' , 52802, NULL )
+	insert into Locations(1,'LosAngeles', 'United States')
+	insert into SHOPS VALUES (1 , 'Common Grounds' , NULL)
+	
+	-- UPDATE VALUES
+	update shops
+	set city_id = 1;
+	
+	update employes 
+	set coffeeeshop_id = 1,coffeeeshop_id = 1;
+2024-02-27 16:56:18.781 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « 1 » au caractère 23
+2024-02-27 16:56:18.781 +01 [12696] INSTRUCTION :  insert into Locations(1,'LosAngeles', 'United States')
+	
+2024-02-27 16:57:30.968 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 16:57:31.730 +01 [10268] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.737 s, sync=0.007 s, total=0.762 s; sync files=6, longest=0.002 s, average=0.002 s; distance=1 kB, estimate=1109 kB; lsn=0/2069150, redo lsn=0/2069118
+2024-02-27 16:58:03.294 +01 [12696] ERREUR:  la colonne « coffeeeshop_id » de la relation « employes » n'existe pas au caractère 22
+2024-02-27 16:58:03.294 +01 [12696] INSTRUCTION :  update employes 
+	set coffeeeshop_id = 1,coffeeeshop_id = 1;
+2024-02-27 16:58:41.191 +01 [12696] ERREUR:  affectations multiples pour la même colonne « coffeeshop_id »
+2024-02-27 16:58:41.191 +01 [12696] INSTRUCTION :  update employes 
+	set coffeeshop_id = 1,coffeeshop_id = 1;
+2024-02-27 17:02:30.734 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 17:02:31.078 +01 [10268] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.316 s, sync=0.009 s, total=0.345 s; sync files=4, longest=0.006 s, average=0.003 s; distance=1 kB, estimate=998 kB; lsn=0/20696F0, redo lsn=0/20696B8
+2024-02-27 17:16:18.464 +01 [12696] ERREUR:  une instruction insert ou update sur la table « fournisseurs » viole la contrainte de clé
+	étrangère « fournisseurs_coffeeshop_id_fkey »
+2024-02-27 17:16:18.464 +01 [12696] DÉTAIL:  La clé (coffeeshop_id)=(2) n'est pas présente dans la table « shops ».
+2024-02-27 17:16:18.464 +01 [12696] INSTRUCTION :  insert into Fournisseurs VALUES (1 , 'Beans and Barley ' ,'Arabica'),(1 , 'Cool Beans ' ,'Robusta'),(2 , ' Vanilla Bean' ,'Liberica'),(2 , 'Beans and Barley ' ,'Arabica'),(2 , 'Cool Beans ' ,'Robusta'),(3 , 'Bean me up' ,'Exclesa'),(3 , ' Vanilla Bean' ,'Liberica'),(3 , 'Cool Beans ' ,'Robusta'),(3 , 'Beans and Barley ' ,'Arabica'),(4 , ' Vanilla Bean' ,'Liberica'),(4 , 'Bean me up' ,'Exclesa'),(5 , 'Beans and Barley ' ,'Arabica')
+	
+2024-02-27 17:17:30.094 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 17:17:30.554 +01 [10268] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.434 s, sync=0.007 s, total=0.461 s; sync files=4, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=899 kB; lsn=0/206A1C8, redo lsn=0/206A190
+2024-02-27 17:21:49.780 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « shops_pkey »
+2024-02-27 17:21:49.780 +01 [12696] DÉTAIL:  La clé « (coffeeshop_id)=(1) » existe déjà.
+2024-02-27 17:21:49.780 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , NULL),(2 , 'Early Rise' , 2),(3 , 'Ancient Bean ' , 3),( 4, 'Urban Grid ' , 4),(5 , 'Tembling Cup ' , 5)
+2024-02-27 17:22:30.556 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 17:22:30.702 +01 [10268] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.120 s, sync=0.005 s, total=0.146 s; sync files=2, longest=0.004 s, average=0.003 s; distance=0 kB, estimate=809 kB; lsn=0/206A500, redo lsn=0/206A4C8
+2024-02-27 17:24:09.186 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « locations_pkey »
+2024-02-27 17:24:09.186 +01 [12696] DÉTAIL:  La clé « (city_id)=(1) » existe déjà.
+2024-02-27 17:24:09.186 +01 [12696] INSTRUCTION :  insert into Locations VALUES (1,'LosAngeles', 'United States' ),( 2 , 'New York' , 'United States'),(3 , 'London' , 'United Kingdom')
+2024-02-27 17:24:20.233 +01 [12696] ERREUR:  erreur de syntaxe sur ou près de « 2 » au caractère 3
+2024-02-27 17:24:20.233 +01 [12696] INSTRUCTION :  ( 2 , 'New York' , 'United States'),(3 , 'London' , 'United Kingdom')
+2024-02-27 17:24:51.562 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « shops_pkey »
+2024-02-27 17:24:51.562 +01 [12696] DÉTAIL:  La clé « (coffeeshop_id)=(1) » existe déjà.
+2024-02-27 17:24:51.562 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , NULL),(2 , 'Early Rise' , 2),(3 , 'Ancient Bean ' , 3),( 4, 'Urban Grid ' , 4),(5 , 'Tembling Cup ' , 5)
+	
+2024-02-27 17:25:21.379 +01 [12696] ERREUR:  une instruction insert ou update sur la table « shops » viole la contrainte de clé
+	étrangère « shops_city_id_fkey »
+2024-02-27 17:25:21.379 +01 [12696] DÉTAIL:  La clé (city_id)=(4) n'est pas présente dans la table « locations ».
+2024-02-27 17:25:21.379 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (2 , 'Early Rise' , 2),(3 , 'Ancient Bean ' , 3),( 4, 'Urban Grid ' , 4),(5 , 'Tembling Cup ' , 5)
+	
+2024-02-27 17:27:30.714 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 17:27:31.190 +01 [10268] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.450 s, sync=0.007 s, total=0.476 s; sync files=5, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=728 kB; lsn=0/206AEE0, redo lsn=0/206AEA8
+2024-02-27 17:28:49.847 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « locations_pkey »
+2024-02-27 17:28:49.847 +01 [12696] DÉTAIL:  La clé « (city_id)=(1) » existe déjà.
+2024-02-27 17:28:49.847 +01 [12696] INSTRUCTION :  insert into Locations VALUES (1,'LosAngeles', 'United States' ),( 2 , 'New York' , 'United States'),(3 , 'London' , 'United Kingdom')
+2024-02-27 17:30:44.191 +01 [12696] ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « shops_pkey »
+2024-02-27 17:30:44.191 +01 [12696] DÉTAIL:  La clé « (coffeeshop_id)=(1) » existe déjà.
+2024-02-27 17:30:44.191 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (1 , 'Common Grounds' , NULL),(2 , 'Early Rise' , 2),(3 , 'Ancient Bean ' , 3),( 4, 'Urban Grid ' , 4),(5 , 'Tembling Cup ' , 5)
+	
+2024-02-27 17:31:22.031 +01 [12696] ERREUR:  une instruction insert ou update sur la table « shops » viole la contrainte de clé
+	étrangère « shops_city_id_fkey »
+2024-02-27 17:31:22.031 +01 [12696] DÉTAIL:  La clé (city_id)=(4) n'est pas présente dans la table « locations ».
+2024-02-27 17:31:22.031 +01 [12696] INSTRUCTION :  insert into SHOPS VALUES (2 , 'Early Rise' , 2),(3 , 'Ancient Bean ' , 3),( 4, 'Urban Grid ' , 4),(5 , 'Tembling Cup ' , 5)
+2024-02-27 17:31:46.269 +01 [12696] ERREUR:  une instruction insert ou update sur la table « fournisseurs » viole la contrainte de clé
+	étrangère « fournisseurs_coffeeshop_id_fkey »
+2024-02-27 17:31:46.269 +01 [12696] DÉTAIL:  La clé (coffeeshop_id)=(2) n'est pas présente dans la table « shops ».
+2024-02-27 17:31:46.269 +01 [12696] INSTRUCTION :  insert into Fournisseurs VALUES (1 , 'Beans and Barley ' ,'Arabica'),(1 , 'Cool Beans ' ,'Robusta'),(2 , ' Vanilla Bean' ,'Liberica'),(2 , 'Beans and Barley ' ,'Arabica'),(2 , 'Cool Beans ' ,'Robusta'),(3 , 'Bean me up' ,'Exclesa'),(3 , ' Vanilla Bean' ,'Liberica'),(3 , 'Cool Beans ' ,'Robusta'),(3 , 'Beans and Barley ' ,'Arabica'),(4 , ' Vanilla Bean' ,'Liberica'),(4 , 'Bean me up' ,'Exclesa'),(5 , 'Beans and Barley ' ,'Arabica')
+	
+2024-02-27 17:32:30.194 +01 [10268] LOG:  d�but du checkpoint : time
+2024-02-27 17:32:30.894 +01 [10268] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.672 s, sync=0.011 s, total=0.701 s; sync files=7, longest=0.003 s, average=0.002 s; distance=6 kB, estimate=656 kB; lsn=0/206C888, redo lsn=0/206C850
+2024-02-27 17:57:55.887 +01 [12696] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-27 17:57:55.918 +01 [10568] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-27 17:57:55.920 +01 [7624] LOG:  n'a pas pu recevoir les données du client : An existing connection was forcibly closed by the remote host.
+	
+2024-02-27 18:39:43.874 +01 [9992] FATAL:  � C:/Users/PC G.M.T/Documents/GitHub/Postgres SQL/data � n'est pas un r�pertoire de donn�es valide
+2024-02-27 18:39:43.874 +01 [9992] D�TAIL:  Le fichier � C:/Users/PC G.M.T/Documents/GitHub/Postgres SQL/data/PG_VERSION � est manquant.
