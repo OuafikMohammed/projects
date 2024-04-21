@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVs GESTION</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Commander Les TVs</h1>
+        <h3>TVs</h3>
+        <select name="" id="tvoptions" class="form-control">
+            <option id=""> -  - CHOISIR - - </option>
+        </select>
+        <h3>Quantité</h3>
+        <form action="">
+            <input type="text" min="1" max="10" class="form-control" id="quantite">
+        </form>        
+        <button class="btn btn-success " id="btn-ajouter">Ajouter au panier</button>
+        <h1>Panier de commandes</h1>
+        <table class="table" id="achats-table">
+            <thead>
+                <tr>
+                    <th>REFERENCE</th>
+                    <th>QUANTITE</th>
+                    <th>IMAGE</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="tdata">
+                <!-- Table body content will go here -->
+            </tbody>
+        </table>
+        <div class="totalHT-container">
+            <div>Total HT</div><div>0DH</div>
+        </div>
+        <div class="totalTTC-container">
+            <div>Total TTC</div><div>0DH</div>
+        </div>
+        <button class="btn btn-primary">Commander</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

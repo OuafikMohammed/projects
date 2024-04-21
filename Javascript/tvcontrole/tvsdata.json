@@ -1,0 +1,8 @@
+{
+    "tvs":[
+        {"nom":"SAMUSNG QLED QE65Q80AA", "prix":17999,"taille":65,"Image":"Images/img1.jpg"},
+        {"nom":"TCL QLED 55C825", "prix":61000,"taille":42,"Image":"Images/img2.jpg"},
+        {"nom":"SOMY OLED XR-75X90J", "prix":25000,"taille":52,"Image":"Images/img3.jpg"},
+        {"nom":"LG OLED 77C1PVA", "prix":9000,"taille":65,"Image":"Images/img4.jpeg"}
+    ]
+}
