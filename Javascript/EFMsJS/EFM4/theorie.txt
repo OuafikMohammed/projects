@@ -1,0 +1,7 @@
+1 -Javascript est un language compilateur de script utilisé pour rendre les sites web dynamiques
+2- Javascript s'execute sur cote client et java s'execute sur cote serveur 
+3- Le bon endroit pour insérer le script est avant la fermature de la balise </body>
+4-  a- true
+    b- true
+5- 
+6- 
