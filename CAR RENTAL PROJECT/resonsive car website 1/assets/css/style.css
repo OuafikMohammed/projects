@@ -1122,3 +1122,20 @@ img {
         justify-content: space-between;
     }
 }
+/*************************/
+/*******GOOGLE MAPS******/
+/*************************/
+.maps-text {
+    color: var(--white-color);
+    margin-bottom: 60px;
+    text-align: center;
+}
+iframe {
+    width: 98%;
+    height: 500px;
+    filter: invert(100%);
+}
+.map-container{
+    display: flex;
+    justify-content: center;
+}

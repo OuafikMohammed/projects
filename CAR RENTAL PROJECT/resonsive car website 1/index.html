@@ -269,9 +269,10 @@
                         Be the first to receive all the information about new cars via email, by simply subscribing to our mailing list.
                     </p>
                     <div class="newsletter__form">
-                        <input type="email" placeholder="Your email address" class="newsletter-input" />
-                        <button class="newsletter-btn">Subscribe</button>
+                        <input type="email" placeholder="Your email address" class="newsletter-input " id="emailInput" />
+                        <button class="newsletter-btn" id="subscribe-btn">Subscribe</button>
                     </div>
+                    <p id="errorText" style="display: none; color: red; margin-right: 200px;">Enter a valid email address</p>
                 </div>
             </div>
         </section>
@@ -492,8 +493,13 @@
                 </div>
             </div>
         </section>
-
-        <!-- =============== FOOTER =================== -->
+        <h1 class="maps-text">Our Location</h1>
+        <div class="map-container">
+            <iframe class="maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.546989266902!2d-7.659943924794273!3d33.5911094419396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d31d1d192005%3A0x3336bbf43850d412!2sShell!5e0!3m2!1sfr!2sma!4v1715114306407!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>    
+        </div>   
+       <!-- =============== FOOTER =================== -->
         <footer class="footer section">
             <div class="container footer__container">
                 <div class="footer__data grid">

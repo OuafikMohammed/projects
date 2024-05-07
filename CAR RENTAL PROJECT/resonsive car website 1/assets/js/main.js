@@ -1,4 +1,4 @@
-// ============= HEADER NAV MENU ========
+// ============= HEADER NAV MENU ===========================
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
@@ -10,7 +10,40 @@ navToggle.addEventListener("click", () => {
 navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
 });
+//EMAIL VALIDATION =========================================
+document.getElementById("subscribe-btn").addEventListener("click",validateAndAnimate)
+function validateAndAnimate() {
+    const emailInput = document.getElementById("emailInput");
+    const errorText = document.getElementById("errorText");
 
+    const email = emailInput.value;
+
+    if (validateEmail(email)) {
+        // Email is valid
+        emailInput.style.border = "2px solid green";
+        errorText.style.display = "none";
+        // Animation
+        emailInput.style.transition = "all 0.5s";
+        emailInput.style.transform = "translateX(20px)";
+        setTimeout(function() {
+            emailInput.style.transform = "translateX(0)";
+        }, 500);
+    } else {
+        // Email is invalid
+        emailInput.style.border = "2px solid red";
+        errorText.style.display = "block";
+        // Animation
+        emailInput.style.transition = "all 0.5s";
+        emailInput.style.transform = "translateX(-20px)";
+        setTimeout(function() {
+            emailInput.style.transform = "translateX(0)";
+        }, 500);
+    }
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+}
 // CHANGE THE BACKGROUND ON SCROLL =========================
 function changeHeaderColor() {
     const header = document.getElementById("header");
@@ -76,15 +109,7 @@ var swiper = new Swiper(".popular__container", {
     },
 });
 
-// =============== MIXITUP ============
-var mixerProducts = mixitup(".product__content", {
-    selectors: {
-        target: ".product__card",
-    },
-    animation: {
-        duration: 300,
-    },
-});
+
 
 /* Link active products */
 const linkProduct = document.querySelectorAll(".product__item");
