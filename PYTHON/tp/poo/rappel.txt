@@ -1,0 +1,106 @@
+// Theorique :
+		- Constructeur de Recopie.
+		- Héritage.
+// Pratique :
+		- Constructeur :
+			$ Par defaut
+			$ Parametres
+		- Methodes Speciales :
+			$ d initialisation
+			$ predefinies :
+				* __str__
+				* __init__
+				* instance
+				* dir
+				* __doc__
+		- Priviléges :
+			$ Public (+)
+			$ Privé (-) (attr, methods)
+		- Setters / Getters
+		- Modificateurs Accesseurs
+		- Attribut :
+			$ De Classe
+			$ D'instance (object)
+		- Variable Statique / Global
+
+// dict method :
+__dict__ = attrb : value ; object.__dict__
+
+// dir method :
+dir(object) = tous les methodes de classe;
+
+// pour ajouter des attrs :
+		object.newAttrb = value
+
+// constructeur declaration def __init__(Parametres) :
+		self.attr = prams
+	init automatique creer when we create the class
+
+// method str : (__str__)
+	str c est pour affichage , automatique execute when we print an object;
+	c est pour redefinition d'affichage du class
+	def __str__ (self):
+		return "what i want to see when i print object"
+
+// Visibilite :
+	public : + ;
+	privé : - ;
+	protege : # ; Heritage acces juste from les class fils et les class meres
+	tous ca est applique aussi sur les methods du classe ansi que les attribut ;
+
+// get() : pour obtenir les infos :
+	def get_age(self):
+		return self._age
+
+// set() : pour set les infos dans un object ;
+	sef set_age(self,x) :
+		set._age = x
+
+// __ prive 
+// _ protege 
+// null public
+
+// Attributs Pive declaration :
+	// Lecteur seul (just Get()) :
+		self.__attrb = m
+
+// Encapsulation && Priviléges :
+	$ Securité (protection des donnees)
+	$ Modularite (Les module dans python : import / package)
+	$ object = code(methodes) + donnees (attributs)
+
+NB : Pourquoi POO : Optimisation du code , Archetecture, Les Acces et Privilége
+
+// del self.attr pour libire la memoire , en python elle est automatique (ramassage en fr)
+
+
+// attribut Privé :
+	-- first method :Getters and setters: get() / set() / del()
+	-- second method Proprerty : Variable = property(fget,fset,fdel,__doc__)
+						object.Variable = value (set)
+						print(object.Variable) (get)
+						del object.cin (del)
+
+	-- third method : decorateurs : @ :
+						@proprerty
+						@cin.getter
+						def get_cin(self):
+							return self.__cin
+						@cin.setter
+						def set_cin(self,c)
+							self.__cin = c
+						@cin.deleter
+						def del_cin(self)
+							return del self.cin
+						
+
+
+	NB : Pour transferer des methodes a des attributs sans utiliser les getters and les setters
+
+Méthodes privés : méthodes dont on a l'accés juste a l'interieur de la classe
+def __afficher()
+
+methodes de classes : @class 
+
+
+avantages de l'heritage :je ne redefinie pas ce qui existe deja
