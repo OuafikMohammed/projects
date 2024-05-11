@@ -1,0 +1,9 @@
+.container {
+    height: 100px;
+    width: 500px;
+    background-color: aqua;
+    margin-top: 5px;
+}
+.encadrer {
+    border: 2px #555 solid;
+}
