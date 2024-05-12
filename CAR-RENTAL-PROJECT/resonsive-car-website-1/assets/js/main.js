@@ -141,19 +141,24 @@ sr.reveal(".home-sub");
 sr.reveal(".home__title", {
     delay: 500
 });
+
 sr.reveal(".home__description", {
     delay: 600
 });
+
 sr.reveal(".home-btn", {
     delay: 700
 });
+
 sr.reveal(".home__value-number, .home__value-description", {
     delay: 800,
     interval: 100,
 });
+
 sr.reveal(".line-h", {
     delay: 800
 });
+
 sr.reveal(".home__img", {
     delay: 900,
     origin: "bottom"
@@ -162,6 +167,7 @@ sr.reveal(".home__img", {
 sr.reveal(".about__data", {
     origin: "right"
 });
+
 sr.reveal(".about__img", {
     origin: "left"
 });
@@ -186,9 +192,11 @@ sr.reveal(".product__subtitle");
 sr.reveal(".products h2", {
     delay: 500
 });
+
 sr.reveal(".product__filters", {
     delay: 600
 });
+
 sr.reveal(".product__card", {
     delay: 700,
     interval: 100
@@ -197,10 +205,12 @@ sr.reveal(".product__card", {
 sr.reveal(".app__container", {
     origin: "bottom"
 });
+
 sr.reveal(".app__data", {
     delay: 500,
     origin: "left"
 });
+
 sr.reveal(".app__img", {
     delay: 600,
     origin: "right"
@@ -209,6 +219,7 @@ sr.reveal(".app__img", {
 sr.reveal(".footer-box", {
     interval: 100
 });
+
 sr.reveal(".copyright", {
     delay: 500
 });
