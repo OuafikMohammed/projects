@@ -1,3 +1,8 @@
+// ============= LOADER ===========================
+document.addEventListener('DOMContentLoaded', function() {
+	document.querySelector('.loader').style.display = 'none';
+	document.querySelector('#content').style.display = 'block';
+});
 // ============= HEADER NAV MENU ===========================
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");

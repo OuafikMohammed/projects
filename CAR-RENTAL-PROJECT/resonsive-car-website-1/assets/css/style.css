@@ -1139,3 +1139,28 @@ iframe {
     display: flex;
     justify-content: center;
 }
+
+/* ============== LOADER SECTION ================ */
+.loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader i {
+	position: absolute;
+	width: 50px;
+	height: auto;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
