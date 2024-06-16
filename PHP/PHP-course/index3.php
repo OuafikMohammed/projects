@@ -19,7 +19,7 @@
             {
                 $this->title = $aTitle;
                 $this->author = $aAuthor;
-                $this->title = $aPages;
+                $this->pages = $aPages;
             }
         }
         # obj is instance of a class

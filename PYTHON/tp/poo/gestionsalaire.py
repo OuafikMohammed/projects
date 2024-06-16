@@ -84,27 +84,46 @@ class Manager(Salarie):
 
     def afficher_manager(self):
         return super() + self.equipe
-
     def ajout_salarie(self,salarie:object):
         self.equipe.append(salarie)
-class Gestionnaire(Manager,Salarie):
-    def _init_(self,matricule,nom,prenom,salaire,tauxCs,equipe,projet):
-        #chainage des constructeurs
-        super()._init_(matricule,nom,prenom,salaire,tauxCs,equipe)
-        # Manager._init_(equipe) because the super() took manager not salarie
-        self.projet = projet
 
+class ChefProjet:
+    def __init__(self,projet):
+        self.projet = projet
+    
+
+    
+class Gestionnaire(ChefProjet,Salarie):
+    def _init_(self,matricule,nom,prenom,salaire,tauxCs,equipe,projet,chiffreAffaire,commission):
+        #chainage des constructeurs
+        Salarie.__init__(matricule,nom,prenom,salaire,tauxCs,equipe)
+        ChefProjet.__init__(projet)
+        self.__chiffreAffaire = chiffreAffaire
+        self.__commission = commission
+    def get_CA(self):
+        return self.__chiffreAffaire
+    def set_CA(self,ca):
+        return self.__chiffreAffaire == ca
+    def get_Comission(self):
+        return self.__commission
+    def set_CA(self,commission):
+        return self.__commission == commission
+    def __calculerSalaireNet(self):
+        salaireFixe = self.tauxCS
+        salaireNet =salaireFixe+(self.__chiffreAffaire*self.__commission/100)
+        return salaireNet
+    def affiche_salaire(self):
+        return self.__calculerSalaireNet()
+    def __eq__(self, other):
+        return self.__matricule == other.__matricule
 
 if __name__ == "_main_":
 
     sa1 = Salarie(1,"Ouafik","Mohammed", 5000,0.25)
     sa2 = Salarie(2,"Mahfoud","Anass", 10000,0.25)
     sa3 = Salarie(3,"Harchid","Reda", 10000,0.25)
-
+    g1 = Gestionnaire(777,"Ouafik","med",13000,12,'projet',19,77)
+    print(g1.affiche_salaire())
 #signature dune fonction = meme nom de parametre et mem type 
     ## redefinition
     ##  surcharge
-
-
-
-

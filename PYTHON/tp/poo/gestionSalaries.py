@@ -105,7 +105,7 @@ if __name__ == '__main__':
     Salarie.comparer_salaires(firstSalarie,secondSalarie)
 
 
-    # instance des class fils :
+    # instance des classes filles :
     managerA = Manager(1,"LEGDANI","AMINE",12000)
     managerB = Manager(2,"ONZY","MERIEM",11000)
 
@@ -124,3 +124,5 @@ if __name__ == '__main__':
     gestionnaire1 = Gestionnaire(1234,"QACEM",97000,"HR_Access")
     print(gestionnaire1.nom)
     print(gestionnaire1.projet)
+    
+    print(str(Salarie))
