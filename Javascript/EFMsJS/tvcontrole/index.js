@@ -5,7 +5,7 @@ class Commandes{
         this.prix = prix;
         this.taille = taille;
         this.image = image;
-        this.quantite = quantite; // Jout de la propriete quantite
+        this.quantite = quantite; // Ajout de la propriete quantite
     } 
 }
 //declaration

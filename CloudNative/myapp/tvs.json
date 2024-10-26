@@ -1,0 +1,32 @@
+{
+  "tvs": [
+    {
+      "id": 1,
+      "nom": "SAMUSNG QLED QE65Q80AA 2024",
+      "prix": 50099.99,
+      "taille": 65,
+      "Image": "Images/img1.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "TCL QLED 55C825",
+      "prix": 61000,
+      "taille": 42,
+      "Image": "Images/img2.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "SOMY OLED XR-75X90J",
+      "prix": 25000,
+      "taille": 52,
+      "Image": "Images/img3.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "LG OLED 77C1PVA",
+      "prix": 9000,
+      "taille": 65,
+      "Image": "Images/img4.jpeg"
+    }
+  ]
+}
