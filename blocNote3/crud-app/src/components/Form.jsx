@@ -257,7 +257,10 @@ export default function Form(){
                                 setId(article.id);
                                 setDesignation(article.designation);
                                 setPrix(article.prix);
+                                setQuantite(article.quantite)
                                 setCategory(article.category);
+                                setIsFeatured(article.isFeatured)
+                                setGender(article.gender);
                             }}
                             className="bg-blue-500 text-white px-4 py-2 rounded"
                         >

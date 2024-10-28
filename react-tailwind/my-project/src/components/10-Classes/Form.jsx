@@ -29,7 +29,41 @@ class Form extends Component {
             student: { id: "", nom: "", prenom: "" }  // Reset form after save
         }));
     }
+    modifier = () => {
+        this.setState((prevState)=> ({
+            students: prevState.students.map((item)=>{
+                if (item.id === prevState.student.id ){
+                    return {
+                        ...item , 
+                        nom : prevState.student.nom,
+                        prenom : prevState.student.prenom 
+                    };
+                }
+                return item;
+            })
+        }))
+    }
+    supprimer = () => {
+        this.setState((prevState)=>({
+            students: prevState.students.filter((item)=>{
+                return item.id !== prevState.student.id
+            })
+        }))
+    }
+    // executed after each render
+    // componentDidMount = () =>{
+    //     console.log('rendereed !!')
+    // }
 
+    // // executed after modifying
+    // componentDidUpdate = () =>{
+    //     console.log("STATE UPDATED !!!")
+    // }
+
+    // // executed after deleting or removing a component
+    // componentWillUnmount = () => {
+    //     console.log("Component unmounted !! (removed)")
+    // }
     render() {
         return (
             <>
@@ -55,13 +89,17 @@ class Form extends Component {
                     onChange={this.handleChange}
                 />
                 <button onClick={this.sauvegarder}>Ajouter</button>
-
+                <button onClick={this.modifier}>Modifier</button>
+                <button onClick={this.supprimer}>Supprimer</button>
                 <table className="table">
+                    <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nom</th>
                             <th>Prenom</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         {this.state.students.map((item, index) => (
                             <tr key={index}>
                                 <td>{item.id}</td>
@@ -69,6 +107,7 @@ class Form extends Component {
                                 <td>{item.prenom}</td>
                             </tr>
                         ))}
+                    </tbody>
                 </table>
             </>
         );

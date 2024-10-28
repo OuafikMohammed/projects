@@ -13,8 +13,8 @@ import React from 'react';
 // import Countuse from './components/6-Counter/Countuse';
 // import Addtolist from './components/7-Addtolist/Addtolist';
 // import WelcomeMessage from './components/10-Classes/Welcome';
-
-import Count from './components/6-Counter/Countuse';
+// import Count from './components/6-Counter/Countuse';
+import Form from './components/10-Classes/Form';
 const App = () => {
   return (
     <>
@@ -35,7 +35,8 @@ const App = () => {
       {/* <Onclick /> */}
       {/* <Addtolist /> */}
       {/* <WelcomeMessage /> */}
-      <Count />
+      {/* <Count /> */}
+      <Form />
     </>
     
   );
