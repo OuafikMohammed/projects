@@ -9,6 +9,8 @@ const Tvs = require('./tvs.json').tvs;
 // API afin qu’elle soit capable d’interpréter le body de la requête 
 app.use(express.json());
 
+
+/// listen to the port 82
 app.listen(82 ,()=>{
     console.log('REST API via EXPRESSJS')
 });
@@ -118,7 +120,7 @@ app.get('/tvs', (req, res) => {
 // put is used to modify the value 
 // of the parametre wanted 
 // wich is ID in our case
-// body d'une requete representent les donees envoyés ou modifiés
+// body d'une requete represente les donées envoyés ou modifiés
 // PUT route
 app.put('/tvs/:id', (req, res) => {
     const id = parseInt(req.params.id);
@@ -141,6 +143,8 @@ app.put('/tvs/:id', (req, res) => {
 app.delete('/tvs/:id',(req,res)=>{
     const id = parseInt(req.params.id);
     let Tv = Tvs.find(tv => tv.id === id);
-    Tvs.splice(Tvs.indexOf(Tv),1)
+    Tvs.splice(Tvs.indexOf(Tv),1);
+    // Save updated TV list back to the JSON file
+    fs.writeFileSync('./tvs.json', JSON.stringify({ tvs: Tvs }, null, 2));
     res.status(200).json(Tvs)
 })

@@ -56,16 +56,26 @@ export default function Form(){
             { id: 4, name: "Furniture" },
         ];
         setCategories(fetchedCategories);
+        // fetch(`http://localhost:5000/api/categories?categ=${categories}`)
+        // .then((response)=>{
+        //     return response.json();
+        // }).then((data)=>{
+        //     setCategories(data);
+        //     console.log(data)
+        // });
     },[]);
     const handleSearch = () => {
+        // AXIOS
         axios
-            .get(`http://localhost:5000/api/search?q=${searchTerm}`)
+            .get(`http://localhost:3080/api/search?q=${searchTerm}`)
             .then((response) => {
                 setSearchResults(response.data);
             })
             .catch((error) => {
                 console.error("Error fetching search results", error);
             });
+        
+        
     };
     return (
         <>  

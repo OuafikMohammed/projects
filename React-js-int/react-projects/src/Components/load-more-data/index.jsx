@@ -5,8 +5,7 @@ export default function LoadMoreData() {
     const [products, setProducts] = useState([]);
     const [count, setCount] = useState(0);
 
-
-    useEffect(()=>{
+   useEffect(()=>{
         async function fetchProducts() {
             try {
                 setLoading(true);

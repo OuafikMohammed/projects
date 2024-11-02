@@ -20,13 +20,6 @@
       "prix": 25000,
       "taille": 52,
       "Image": "Images/img3.jpg"
-    },
-    {
-      "id": 4,
-      "nom": "LG OLED 77C1PVA",
-      "prix": 9000,
-      "taille": 65,
-      "Image": "Images/img4.jpeg"
     }
   ]
 }

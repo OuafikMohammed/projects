@@ -50,6 +50,7 @@ class Form extends Component {
             })
         }))
     }
+    // CYCLE DE VIE D'UN COMPOSANT DE TYPE CLASSE
     // executed after each render
     // componentDidMount = () =>{
     //     console.log('rendereed !!')
@@ -64,6 +65,7 @@ class Form extends Component {
     // componentWillUnmount = () => {
     //     console.log("Component unmounted !! (removed)")
     // }
+
     render() {
         return (
             <>
