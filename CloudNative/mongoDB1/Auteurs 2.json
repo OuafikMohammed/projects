@@ -1,0 +1,109 @@
+[
+  {
+    "Nom": "Victor Hugo",
+    "âge": 45,
+    "Romans": [
+      "Notre-Dame de Paris",
+      "Les misérables",
+      "Quatrevingt-treize"
+    ],
+    "poésies": [
+      {
+        "année": 1822,
+        "titre": "Odes et poésies diverses"
+      },
+      {
+        "année": 1825,
+        "titre": "Nouvelles Odes"
+      },
+      {
+        "année": 1828,
+        "titre": "Odes et Ballades"
+      },
+      {
+        "année": 1834,
+        "titre": "Claude Gueux"
+      }
+    ]
+  },
+  {
+    "Nom": "Ernest Miller Hemingway",
+    "Romans": [
+      "The Torrents of Spring",
+      "The Sun Also Rises",
+      "A Farewell to Arms"
+    ]
+  },
+  {
+    "Nom": "Gabriel García Márquez",
+    "Romans": [
+      "El coronel no tiene quien le escriba",
+      "Crónica de una muerte anunciada",
+      "Cien años de soledad"
+    ],
+    "Nouvelles": [
+      {
+        "année": 1962,
+        "titre": "Los funerales de la Mamá Grande"
+      },
+      {
+        "année": 1962,
+        "titre": "Ojos de perro azul"
+      }
+    ]
+  },
+  {
+    "Nom": "T1",
+    "statut": "Test",
+    "Romans": [
+      "RT1",
+      "RT2"
+    ],
+    "poésies": [
+      {
+        "année": 21,
+        "titre": "PT1"
+      },
+      {
+        "année": 22,
+        "titre": "PT2"
+      }
+    ]
+  },
+  {
+    "Nom": "T2",
+    "statut": "Test",
+    "Romans": [
+      "RS1",
+      "RS2"
+    ],
+    "poésies": [
+      {
+        "année": 21,
+        "titre": "PS1"
+      },
+      {
+        "année": 22,
+        "titre": "PS2"
+      }
+    ]
+  },
+  {
+    "Nom": "T3",
+    "statut": "Test",
+    "Romans": [
+      "R1",
+      "R2"
+    ],
+    "poésies": [
+      {
+        "année": 21,
+        "titre": "P1"
+      },
+      {
+        "année": 22,
+        "titre": "P2"
+      }
+    ]
+  }
+]
