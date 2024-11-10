@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
 function ArticleForm(){
     const [article, setArticle] = useState({
-                                               id:"",
+                                               id:0,
                                                designation:"",
-                                               idCategorie:"",
-                                               quantite:"",
-                                               prix:"" 
+                                               idCategorie:0,
+                                               quantite:0,
+                                               prix:0
                                             })
     const [articles, setArticles] = useState([])
-    const [categories, setCategories] = useState([]) 
+    const [categories, setCategories] = useState([])
     //const [visible, setVisible] = useState(false)
-    const [prixCouleur, setPrixCouleur] = useState('bg-green-200 border')
+    const [prixCouleur, setPrixCouleur] = useState("bg-grey-500 border")
 
     function handleAjouter(){
         setArticles([...articles, {...article}])
@@ -36,7 +36,7 @@ function ArticleForm(){
         setArticles(newArticles);
     }
 
-    //Cycle de vie d'un composant 
+    //Cycle de vie d'un composant
     // Rendered once
     useEffect(function(){
         setCategories([{id:1, libelle:"Consommable"},
@@ -45,38 +45,50 @@ function ArticleForm(){
                         ])
     }, [])
 
-    //Change the color just after article.idCategorie changed
-    useEffect(function(){
-        if(article.idCategorie == 1){
-            setPrixCouleur("bg-blue-300 border")
-        }else if(article.idCategorie == 2){
-            setPrixCouleur("bg-green-200 border")
-        }else if(article.idCategorie == 3){
-            setPrixCouleur("bg-red-200 border")
+    // //Change the color just after article.idCategorie changed
+    // const colorMap = {
+    //     1: "bg-blue-500 border",
+    //     2: "bg-green-700 border",
+    //     3: "bg-red-600 border",
+    // };
+
+    // useEffect(() => {
+    //     setPrixCouleur(colorMap[article.idCategorie] || "");
+    // }, [article.idCategorie]);
+    useEffect(() => {
+        console.log("idCategorie:", article.idCategorie);
+        if (article.idCategorie === 1) {
+            setPrixCouleur("bg-blue-500 border");
+        } else if (article.idCategorie === 2) {
+            setPrixCouleur("bg-green-700 border");
+        } else if (article.idCategorie === 3) {
+            setPrixCouleur("bg-red-600 border");
         }
-    }, [article.idCategorie])
+        console.log("prixCouleur set to:", prixCouleur);
+    }, [article.idCategorie]);
     
 
+
     return (
-        <>
+        <>  
             <fieldset className="table-container p-4">
             <legend>Nouvelle ligne</legend>
                 <div className="form-row">
                     <label htmlFor="id">ID :</label>
-                    <input type="text" value={article.id} name="id" className="bg-gray-50 w-48 border" 
+                    <input type="text" value={article.id} name="id" className="bg-gray-50 w-48 border"
                     onChange={(e)=>setArticle({...article, id:e.target.value})} />
                 </div>
                 <div className="form-row">
                     <label htmlFor="designation">Designation :</label>
-                    <input type="text" value={article.designation} name="designation"  className="bg-gray-50 w-48 border" 
+                    <input type="text" value={article.designation} name="designation"  className="bg-gray-50 w-48 border"
                     onChange={(e)=>setArticle({...article, designation:e.target.value})} />
                 </div>
-                
+
                 <div className="form-row">
                     <label htmlFor="quantite">Quantité :</label>
-                    <input type="text" value={article.quantite} name="quantite" className="bg-gray-50 w-48 border"  
+                    <input type="text" value={article.quantite} name="quantite" className="bg-gray-50 w-48 border"
                     onChange={(e)=>setArticle({...article, quantite:e.target.value})} />
-                    
+
                 </div>
 
                 <div className="form-row">
@@ -86,11 +98,12 @@ function ArticleForm(){
                 </div>
 
                 <div className="form-row">
-                    <label htmlFor="prix">Catégorie :</label>
+                    <label htmlFor="categorie">Catégorie :</label>
                     <select value={article.idCategorie} onChange={(e)=>setArticle({...article, idCategorie:e.target.value})} className="bg-gray-50 w-48 h-7 border">
-                        {categories.map(function(item){
-                            return (<option value={item.id}>{item.libelle}</option>)
-                        })}                        
+                        {console.log(article.idCategorie)}
+                        {categories.map(function(item,index){
+                            return (<option key={index} value={item.id}>{item.libelle}</option>)
+                        })}
                     </select>
                 </div>
 
@@ -128,17 +141,26 @@ function ArticleForm(){
                                 }
 
                                 return(
-                                    <tr key={index} onClick={()=>setArticle({...item})} className={`hover:bg-red-300 cursor-pointer ${item.id === article.id ? "bg-red-300" : "bg-white" } `} tabIndex={1}>
-                                        <th>{item.id}</th>
-                                        <td>{item.designation}</td>
-                                        <td>{item.idCategorie}</td>
-                                        <td className="note" style={{color:coleurQuantite}}>{item.quantite}</td>
-                                        <td>{item.prix}</td>
-                                        <td>{prixTotal}</td>                                        
+
+
+                                    <tr
+                                        key={item.id}
+                                        onClick={() => setArticle({...item})}
+                                        className={`hover:bg-red-200 cursor-pointer 
+                                            ${item.id === article.id ? "bg-red-300" : "bg-white"}`}
+                                        tabIndex={1}
+                                    // when pressing tab it starts whit the first line of tr then the sencond etc
+                                    >
+                                        <th value={item.id}>{item.id}</th>
+                                        <td value={item.designation}>{item.designation}</td>
+                                        <td value={item.idCategorie}>{item.idCategorie}</td>
+                                        <td className="note" style={{color: coleurQuantite}} value={item.quantite}>{item.quantite}</td>
+                                        <td className={`${prixCouleur}`} value={item.prix} >{item.prix}</td>
+                                        <td>{prixTotal}</td>
                                     </tr>
                                 );
                             })
-                        }                        
+                        }
                     </tbody>
                     <tfoot>
                         <tr>

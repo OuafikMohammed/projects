@@ -15,12 +15,14 @@ import { Route , Routes} from 'react-router-dom';
 // import WelcomeMessage from './components/10-Classes/Welcome';
 // import Count from './components/6-Counter/Countuse';
 // import Form from './components/10-Classes/Form';
-import NavBar from './components/2-ClassComponents/NavBar/NavBar';
-import Card from './components/2-ClassComponents/Card/Card'
-import Header from  './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import NavBar from './components/2-ClassComponents/NavBar/NavBar';
+// import Card from './components/2-ClassComponents/Card/Card'
+// import Header from  './components/Header/Header';
+// import Footer from './components/Footer/Footer';
 import './index.css';
-import Timer from './components/6-Counter/Timer';
+// import Timer from './components/6-Counter/Timer';
+// import ArticleForm from './components/13-ArticleFormObjects/ArticleForm';
+import Students from './components/3-Props/Students/Students';
 const App = () => {
   return (
     <>
@@ -50,7 +52,9 @@ const App = () => {
         <Route path="/header" element={<Header/>} />
         <Route path="/footer" element={<Footer/>} />
       </Routes> */}
-      <Timer />
+      {/* <Timer /> */}
+      {/* <ArticleForm /> */}
+      <Students />
     </>
     
   );

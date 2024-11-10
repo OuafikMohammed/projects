@@ -14,11 +14,7 @@ const Formulaire = () => {
 
   // Fonction pour gérer le changement des valeurs du formulaire
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setEvenement({
-      ...evenement,
-      [name]: value
-    });
+    setEvenement({...evenement,[e.target.name]: e.target.value});
   };
 
   // Fonction pour afficher les informations saisies
@@ -37,6 +33,7 @@ const Formulaire = () => {
             type="text"
             name="theme"
             value={evenement.theme}
+            // working with names to handle Change
             onChange={handleChange}
             required
           />

@@ -1,10 +1,10 @@
 import React from "react";
-// function Student({nom,prenom}){
+// function Student(props){
 //     return (
 //         <>
 //             <div style={{backgroundColor:props.color,display:'flex',justifyContent:'center',textAlign:'center'}}>
-//                 <h1 className="text-center text-gray-600">Nom : {.nom}</h1>
-//                 <h1 className="text-center text-gray-600">prenom : {prenom}</h1>
+//                 <h1 className="text-center text-gray-600">Nom : {props.nom}</h1>
+//                 <h1 className="text-center text-gray-600">prenom : {props.prenom}</h1>
 //                 <br />
 //             </div>
             
@@ -12,12 +12,12 @@ import React from "react";
 //     )
 // }
 // IT's common to destructure values for cleaner code
-function Student(props){
+function Student({nom,prenom,color}){
     return (
         <>
-            <div style={{backgroundColor:props.color,display:'flex',justifyContent:'center',textAlign:'center'}}>
-                <h1 className="text-center text-gray-600">Nom : {props.nom}</h1>
-                <h1 className="text-center text-gray-600">prenom : {props.prenom}</h1>
+            <div style={{backgroundColor:color,display:'flex',justifyContent:'center',textAlign:'center'}}>
+                <h1 className="text-center text-gray-600">Nom : {nom}</h1>
+                <h1 className="text-center text-gray-600">prenom : {prenom}</h1>
                 <br />
             </div>
             
