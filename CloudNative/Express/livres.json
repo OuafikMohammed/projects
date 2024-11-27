@@ -1,0 +1,16 @@
+[
+  {
+    "ISBN": "123456789",
+    "Titre": "Dune",
+    "Auteur": "Frank Herbert",
+    "Prix": 250,
+    "Genre": "Science Fiction"
+  },
+  {
+    "ISBN": "987654321",
+    "Titre": "Orgueil et Prejuges",
+    "Auteur": "Jane Austen",
+    "Prix": 180,
+    "Genre": "Romance"
+  }
+]

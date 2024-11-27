@@ -1,0 +1,72 @@
+[
+    {
+        "id": "e1",
+        "theme": "Développement web",
+        "Description": "Introduction au développement web moderne",
+        "cout_journalier": 500,
+        "Durée": 13,
+        "Ateliers": [
+            {
+                "_id": 1,
+                "nomAtelier": "Atelier HTML",
+                "descriptionAtelier": "Introduction à HTML"
+            }
+        ]
+    },
+    {
+        "id": "e2",
+        "theme": "Développement web",
+        "Description": "Avancé en développement web",
+        "cout_journalier": 600,
+        "Durée": 15,
+        "Ateliers": [
+            {
+                "_id": 2,
+                "nomAtelier": "Atelier CSS",
+                "descriptionAtelier": "Introduction à CSS"
+            }
+        ]
+    },
+    {
+        "id": "e3",
+        "theme": "Développement mobile",
+        "Description": "Introduction au développement mobile",
+        "cout_journalier": 700,
+        "Durée": 10,
+        "Ateliers": [
+            {
+                "_id": 3,
+                "nomAtelier": "Atelier Android",
+                "descriptionAtelier": "Introduction à Android"
+            }
+        ]
+    },
+    {
+        "id": "e4",
+        "theme": "Développement de jeux",
+        "Description": "Introduction au développement de jeux",
+        "cout_journalier": 800,
+        "Durée": 12,
+        "Ateliers": [
+            {
+                "_id": 4,
+                "nomAtelier": "Atelier Unity",
+                "descriptionAtelier": "Introduction à Unity"
+            }
+        ]
+    },
+    {
+        "id": "e5",
+        "theme": "Data Science",
+        "Description": "Introduction à la Data Science",
+        "cout_journalier": 900,
+        "Durée": 14,
+        "Ateliers": [
+            {
+                "_id": 5,
+                "nomAtelier": "Atelier Python",
+                "descriptionAtelier": "Introduction à Python pour la Data Science"
+            }
+        ]
+    }
+]

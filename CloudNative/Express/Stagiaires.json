@@ -1,0 +1,15 @@
+[
+    { "id": 1, "matricule": 1454, "nom": "Alaoui", "codepostal": 20, "ville": "casa", "moyenne": 12.56 },
+    { "id": 2, "matricule": 1455, "nom": "El Khouyi", "codepostal": 10, "ville": "rabat", "moyenne": 13.25 },
+    { "id": 3, "matricule": 1456, "nom": "Benjelloun", "codepostal": 8, "ville": "agadir", "moyenne": 11.75 },
+    { "id": 4, "matricule": 1457, "nom": "Chraibi", "codepostal": 4, "ville": "marrakech", "moyenne": 14.10 },
+    { "id": 5, "matricule": 1458, "nom": "Faqir", "codepostal": 9, "ville": "tanger", "moyenne": 10.95 },
+    { "id": 6, "matricule": 1459, "nom": "Ziani", "codepostal": 6, "ville": "fes", "moyenne": 15.50 },
+    { "id": 7, "matricule": 1460, "nom": "Amrani", "codepostal": 3, "ville": "meknes", "moyenne": 12.80 },
+    { "id": 8, "matricule": 1461, "nom": "El Idrissi", "codepostal": 5, "ville": "oujda", "moyenne": 13.90 },
+    { "id": 9, "matricule": 1462, "nom": "Maaroufi", "codepostal": 20, "ville": "casa", "moyenne": 14.00 },
+    { "id": 10, "matricule": 1463, "nom": "Bouabid", "codepostal": 10, "ville": "rabat", "moyenne": 12.00 },
+    { "id": 11, "matricule": 1464, "nom": "Kadiri", "codepostal": 8, "ville": "agadir", "moyenne": 11.20 },
+    { "id": 12, "matricule": 1465, "nom": "Jabiri", "codepostal": 4, "ville": "marrakech", "moyenne": 13.75 },
+    { "id": 13, "matricule": 1466, "nom": "El Bouzidi", "codepostal": 6, "ville": "fes", "moyenne": 14.30 }
+]

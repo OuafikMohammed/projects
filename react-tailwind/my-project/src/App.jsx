@@ -22,7 +22,8 @@ import { Route , Routes} from 'react-router-dom';
 import './index.css';
 // import Timer from './components/6-Counter/Timer';
 // import ArticleForm from './components/13-ArticleFormObjects/ArticleForm';
-import Students from './components/3-Props/Students/Students';
+// import Students from './components/3-Props/Students/Students';
+import Count from './components/6-Counter/Countuse';
 const App = () => {
   return (
     <>
@@ -54,7 +55,8 @@ const App = () => {
       </Routes> */}
       {/* <Timer /> */}
       {/* <ArticleForm /> */}
-      <Students />
+      {/* <Students /> */}
+      <Count />
     </>
     
   );

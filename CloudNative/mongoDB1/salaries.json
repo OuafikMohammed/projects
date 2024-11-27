@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "sl",
+        "nomsal": "Alami",
+        "prenomsal": "Sara",
+        "fonction": "Technicien",
+        "service": {
+            "codeser": "1",
+            "nomser": "informatique"
+        }
+    },
+    {
+        "_id": "s2",
+        "nomsal": "Bennani",
+        "prenomsal": "Ahmed",
+        "fonction": "Ingénieur",
+        "service": {
+            "codeser": "2",
+            "nomser": "développement"
+        }
+    },
+    {
+        "_id": "s3",
+        "nomsal": "Dahbi",
+        "prenomsal": "Chakib",
+        "fonction": "Analyste",
+        "service": {
+            "codeser": "3",
+            "nomser": "finance"
+        }
+    }
+]
