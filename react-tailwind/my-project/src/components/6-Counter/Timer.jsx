@@ -8,7 +8,6 @@ function Timer() {
     const interval = setInterval(() => {
       setCount((prevCount) => prevCount + 1);
     }, 1000);
-
     // Clean up on component unmount
     return (() =>{ 
         clearInterval(interval)

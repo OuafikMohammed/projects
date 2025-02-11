@@ -20,10 +20,13 @@ import { Route , Routes} from 'react-router-dom';
 // import Header from  './components/Header/Header';
 // import Footer from './components/Footer/Footer';
 import './index.css';
+import WelcomeMessage from './components/10-Classes/Welcome';
 // import Timer from './components/6-Counter/Timer';
 // import ArticleForm from './components/13-ArticleFormObjects/ArticleForm';
 // import Students from './components/3-Props/Students/Students';
-import Count from './components/6-Counter/Countuse';
+// import Count from './components/6-Counter/Countuse';
+// import Timer from './components/6-Counter/Timer';
+
 const App = () => {
   return (
     <>
@@ -56,9 +59,10 @@ const App = () => {
       {/* <Timer /> */}
       {/* <ArticleForm /> */}
       {/* <Students /> */}
-      <Count />
+      {/* <Count /> */}
+      {/* <Timer /> */}
+      <WelcomeMessage />
     </>
-    
   );
 };
 
