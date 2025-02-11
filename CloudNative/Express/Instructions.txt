@@ -1,0 +1,12 @@
+1. Créer un nouveau dossier
+2. npm init -y
+3. npm install jsonwebtoken
+4. npm install bcrypt
+5. Adapter le code à votre bd et nom de la collection
+6. Executer le fichier app.js : node app.js
+7.Tester l'API avec Postman:
+   - Operations : POST 
+   - URL : http://localhost:3000/signup
+   - Ajoutez des données dans le request body 
+   - Click send
+8. Affichage du token avec ses details

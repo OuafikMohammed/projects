@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const Post = require("./models/Post");
-const mongoose = require("mongoose");
+// const Post = require("./models/Post");
+// const mongoose = require("mongoose");
 // const equipes = require('./equipes.json')
 // const stagiaires = require('./stagiaires.json')
 // const salaries = require('./salaries.json')
@@ -68,17 +68,24 @@ app.use(cors());
 //     res.status(200).json(livres)
 // })
 
-app.post("/post", async (req, res) => {
-  try {
-    const newPost = new Post(req.body);
-    await newPost.save();
+// app.post("/post", async (req, res) => {
+//   try {
+//     const newPost = new Post(req.body);
+//     await newPost.save();
 
-    res.json(newPost);
-  } catch(error) {
-    res.status(400).send(error);
-  }
-});
+//     res.json(newPost);
+//   } catch(error) {
+//     res.status(400).send(error);
+//   }
+// });
 
-app.listen(PORT, () => {
-  console.log(`Running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Running on port ${PORT}`);
+// });
+
+// Non-error handling middleware
+// app.use(express.json()); // Parses incoming JSON requests
+// app.use(cors()); // Enables CORS
+
+// // Route handling middleware
+// app.post('/signup', loginController.signup);

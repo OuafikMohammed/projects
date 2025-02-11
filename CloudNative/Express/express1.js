@@ -25,8 +25,8 @@ app.get("/equipes", (req, res) => {
                 .then((devices) => {res.json(devices);
                     })
 })
-
-
+// req : contient les informations de la requete HTTP du client 
+// res : envoyer la reponse du serveur au client apres avoir traite la requette
 app.get("/equipes",(req, res) => {
     let equipes = []
     dbConnection.collection("equipes")
