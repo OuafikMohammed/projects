@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class Form extends Component {
     constructor(props) {
-        super(props);
+        super(props);// nous premet d'initialiser this.props 
+        // INITIAL STATE
         this.state = {
             students: [],
             student: {
@@ -21,6 +22,7 @@ class Form extends Component {
             }
         });
     }
+    
     // handle change : this.setState to the student object while typing ( onChange() ) 
     // using student: {...shallowCopyOdTheCurrentState (we copy the content cause it's an object), ValueChanged ( [e.target.name]:e.target.value ===> [realname]:realvalue )}
     sauvegarder = () => {

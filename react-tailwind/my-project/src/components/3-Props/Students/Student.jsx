@@ -20,7 +20,6 @@ function Student({nom,prenom,color}){
                 <h1 className="text-center text-gray-600">prenom : {prenom}</h1>
                 <br />
             </div>
-            
         </>
     )
 }

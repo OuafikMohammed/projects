@@ -20,7 +20,10 @@ import { Route , Routes} from 'react-router-dom';
 // import Header from  './components/Header/Header';
 // import Footer from './components/Footer/Footer';
 import './index.css';
-import WelcomeMessage from './components/10-Classes/Welcome';
+import TemplateLiterals from './components/15-TemplateLitersals/test';
+// import ArticleForm from './components/13-ArticleFormObjects/ArticleForm';
+// import WelcomeMessage from './components/10-Classes/Welcome';
+// import Students from './components/3-Props/Students/Students';
 // import Timer from './components/6-Counter/Timer';
 // import ArticleForm from './components/13-ArticleFormObjects/ArticleForm';
 // import Students from './components/3-Props/Students/Students';
@@ -61,7 +64,10 @@ const App = () => {
       {/* <Students /> */}
       {/* <Count /> */}
       {/* <Timer /> */}
-      <WelcomeMessage />
+      {/* <WelcomeMessage /> */}
+      {/* <Students /> */}
+      {/* <ArticleForm /> */}
+      <TemplateLiterals />
     </>
   );
 };

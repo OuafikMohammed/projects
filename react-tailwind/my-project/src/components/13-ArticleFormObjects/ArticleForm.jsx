@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 function ArticleForm(){
     const [article, setArticle] = useState({
-                                               id:0,
+                                               id:null,
                                                designation:"",
                                                idCategorie:0,
                                                quantite:0,
@@ -10,7 +10,7 @@ function ArticleForm(){
     const [articles, setArticles] = useState([])
     const [categories, setCategories] = useState([])
     //const [visible, setVisible] = useState(false)
-    const [prixCouleur, setPrixCouleur] = useState("bg-grey-500 border")
+    const [prixCouleur, setPrixCouleur] = useState("bg-red-500 border")
 
     function handleAjouter(){
         setArticles([...articles, {...article}])
@@ -64,8 +64,7 @@ function ArticleForm(){
         } else if (article.idCategorie === 3) {
             setPrixCouleur("bg-red-600 border");
         }
-        console.log("prixCouleur set to:", prixCouleur);
-    }, [article.idCategorie]);
+    }, [article]);
     
 
 
